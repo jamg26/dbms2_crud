@@ -6,3 +6,12 @@ C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\bin\Debug\dbms2_crud.e
 C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\bin\Debug\dbms2_crud.pdb
 C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.exe
 C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.pdb
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.exe
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.pdb
+D:\Galicia\dbms2_crud\dbms2_crud\bin\Debug\dbms2_crud.exe
+D:\Galicia\dbms2_crud\dbms2_crud\bin\Debug\dbms2_crud.pdb
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\ResolveAssemblyReference.cache
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.Main.resources
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.Properties.Resources.resources
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.csproj.GenerateResource.Cache
+D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.FillForm.resources
