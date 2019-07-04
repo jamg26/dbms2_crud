@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Data;
 
 namespace dbms2_crud {
     class dbClass {
