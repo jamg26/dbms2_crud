@@ -52,18 +52,28 @@ namespace dbms2_crud
 
             if (this.activeForm == "tb_info") {
                 db.dbInsert("INSERT INTO tb_info (lastname, firstname, middlename, address, birthdate, birthplace, contact, department, job) VALUES ('" + txtLN.Text + "', '" + txtFN.Text + "', '" + txtMN.Text + "', '" + txtAdd.Text + "', '" + txtBDate.Text + "', '" + txtBPlace.Text + "', '" + txtContact.Text + "', " + Convert.ToInt32(cmbDept.SelectedIndex + 1) + ", " + Convert.ToInt32(cmbJob.SelectedIndex + 1) + ")");
-                MessageBox.Show("Added!");
             }
+            if (this.activeForm == "tb_department") {
+                db.dbInsert("INSERT INTO tb_department (code, description) VALUES ('" + txtCode.Text + "', '" + txtDesc.Text + "')");
+            }
+            if (this.activeForm == "tb_job") {
+                db.dbInsert("INSERT INTO tb_job (description) VALUES ('" + txtJob.Text + "')");
+            }
+            MessageBox.Show("Added!");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e) {
             dbClass db = new dbClass();
-
             if (this.activeForm == "tb_info") {
-                //db.dbInsert("UPDATE tb_info (lastname, firstname, middlename, address, birthdate, birthplace, contact, department, job) VALUES ('" + txtLN.Text + "', '" + txtFN.Text + "', '" + txtMN.Text + "', '" + txtAdd.Text + "', '" + txtBDate.Text + "', '" + txtBPlace.Text + "', '" + txtContact.Text + "', " + Convert.ToInt32(cmbDept.SelectedIndex + 1) + ", " + Convert.ToInt32(cmbJob.SelectedIndex + 1) + ")");
                 db.dbUpdate("UPDATE tb_info SET lastname='" + txtLN.Text + "', firstname='" + txtFN.Text + "', middlename='" + txtMN.Text + "', address='" + txtAdd.Text + "', birthdate='" + txtBDate.Text + "', birthplace='" + txtBPlace.Text + "', contact='" + txtContact.Text + "', department='" + Convert.ToInt32(cmbDept.SelectedIndex + 1) + "', job='" + Convert.ToInt32(cmbJob.SelectedIndex + 1) + "' WHERE id=" + this.activeID);
-                MessageBox.Show("Updated!");
             }
+            if (this.activeForm == "tb_department") {
+                db.dbUpdate("UPDATE tb_department SET code='" + txtCode.Text + "', description='" + txtDesc.Text + "' WHERE id=" + this.activeID);
+            }
+            if (this.activeForm == "tb_job") { 
+                db.dbUpdate("UPDATE tb_job SET description='" + txtJob.Text + "' WHERE id=" + this.activeID);
+            }
+            MessageBox.Show("Updated!");
         }
     }
 }

@@ -70,6 +70,9 @@ namespace dbms2_crud {
             if (this.activeTab == "tb_department") {
                 db.dbDelete("DELETE FROM tb_department WHERE id=" + this.del_id);
             }
+            if (this.activeTab == "tb_job") {
+                db.dbDelete("DELETE FROM tb_job WHERE id=" + this.del_id);
+            }
             MessageBox.Show("DELETED!");
         }
 
@@ -101,6 +104,37 @@ namespace dbms2_crud {
             try {
                 this.del_id = Convert.ToInt32(dataGridView3.CurrentRow.Cells[0].Value.ToString());
             } catch { }
+        }
+
+        private void dataGridView3_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            FillForm form = new FillForm();
+            if (this.activeTab == "tb_department") {
+                form.comboBox1.Text = "tb_department";
+                form.btnUpdate.Visible = true;
+                form.btnAdd.Visible = false;
+                form.txtCode.Text = dataGridView3.CurrentRow.Cells[1].Value.ToString();
+                form.txtDesc.Text = dataGridView3.CurrentRow.Cells[2].Value.ToString();
+                form.activeID = dataGridView3.CurrentRow.Cells[0].Value.ToString();
+                form.Show();
+            }
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) {
+            try {
+                this.del_id = Convert.ToInt32(dataGridView2.CurrentRow.Cells[0].Value.ToString());
+            } catch { }
+        }
+
+        private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            FillForm form = new FillForm();
+            if (this.activeTab == "tb_job") {
+                form.comboBox1.Text = "tb_job";
+                form.btnUpdate.Visible = true;
+                form.btnAdd.Visible = false;
+                form.txtJob.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+                form.activeID = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+                form.Show();
+            }
         }
     }
 }

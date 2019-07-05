@@ -52,8 +52,8 @@
             this.grp_tbdept = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.grp_tbjob = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtJob = new System.Windows.Forms.TextBox();
@@ -271,8 +271,8 @@
             // 
             this.grp_tbdept.Controls.Add(this.label11);
             this.grp_tbdept.Controls.Add(this.label10);
-            this.grp_tbdept.Controls.Add(this.textBox2);
-            this.grp_tbdept.Controls.Add(this.textBox1);
+            this.grp_tbdept.Controls.Add(this.txtDesc);
+            this.grp_tbdept.Controls.Add(this.txtCode);
             this.grp_tbdept.Location = new System.Drawing.Point(26, 44);
             this.grp_tbdept.Name = "grp_tbdept";
             this.grp_tbdept.Size = new System.Drawing.Size(470, 239);
@@ -299,19 +299,19 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Code";
             // 
-            // textBox2
+            // txtDesc
             // 
-            this.textBox2.Location = new System.Drawing.Point(23, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(332, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtDesc.Location = new System.Drawing.Point(23, 84);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(332, 20);
+            this.txtDesc.TabIndex = 1;
             // 
-            // textBox1
+            // txtCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtCode.Location = new System.Drawing.Point(23, 42);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(119, 20);
+            this.txtCode.TabIndex = 0;
             // 
             // grp_tbjob
             // 
@@ -391,11 +391,8 @@
         private System.Windows.Forms.GroupBox grp_tbdept;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox grp_tbjob;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtJob;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.TextBox txtFN;
         public System.Windows.Forms.TextBox txtMN;
@@ -408,5 +405,8 @@
         public System.Windows.Forms.ComboBox cmbJob;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.TextBox txtCode;
+        public System.Windows.Forms.TextBox txtDesc;
+        public System.Windows.Forms.TextBox txtJob;
     }
 }
