@@ -12,7 +12,7 @@ namespace dbms2_crud {
 
         public static SqlConnection getConnection() {
             string dbServer = "35.198.198.212";
-            string dbName = "Reservation_System";
+            string dbName = "dbms_galicia";
             string dbUser = "sa";
             SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=Jamuel1226;");
             return conn;

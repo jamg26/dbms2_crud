@@ -1,0 +1,9 @@
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\bin\Release\dbms2_crud.exe
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\bin\Release\dbms2_crud.pdb
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\dbms2_crud.FillForm.resources
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\dbms2_crud.Main.resources
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\dbms2_crud.Properties.Resources.resources
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\dbms2_crud.csproj.GenerateResource.Cache
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\dbms2_crud.exe
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Release\dbms2_crud.pdb

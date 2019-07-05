@@ -15,3 +15,4 @@ D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.Main.resources
 D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.Properties.Resources.resources
 D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.csproj.GenerateResource.Cache
 D:\Galicia\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.FillForm.resources
+C:\Users\jammm\Desktop\repositories\dbms2_crud\dbms2_crud\obj\Debug\dbms2_crud.FillForm.resources

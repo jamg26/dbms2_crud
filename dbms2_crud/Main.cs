@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace dbms2_crud {
     public partial class Main : Form {
-        string activeTab;
+        string activeTab = "tb_info";
         int del_id;
         public Main() {
             InitializeComponent();
@@ -32,24 +32,28 @@ namespace dbms2_crud {
         {
             dbClass db = new dbClass();
             System.Data.DataTable dt = db.dbSelect("SELECT * FROM tb_department ORDER BY id DESC");
-            dataGridView2.DataSource = dt;
+            dataGridView3.DataSource = dt;
         }
         private void getJobData()
         {
             dbClass db = new dbClass();
             System.Data.DataTable dt = db.dbSelect("SELECT * FROM tb_job ORDER BY id DESC");
-            dataGridView3.DataSource = dt;
+            dataGridView2.DataSource = dt;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FillForm form = new FillForm();
+            form.btnAdd.Visible = true;
+            form.btnUpdate.Visible = false;
             form.Show();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.del_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            try {
+                this.del_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            } catch { }
         }
 
         private void tabtool1_Selected(object sender, TabControlEventArgs e)
@@ -60,9 +64,43 @@ namespace dbms2_crud {
         private void delBtn_Click(object sender, EventArgs e)
         {
             dbClass db = new dbClass();
-            db.dbDelete("DELETE FROM tb_info WHERE id=" + this.del_id);
+            if (this.activeTab == "tb_info") {
+                db.dbDelete("DELETE FROM tb_info WHERE id=" + this.del_id);
+            }
+            if (this.activeTab == "tb_department") {
+                db.dbDelete("DELETE FROM tb_department WHERE id=" + this.del_id);
+            }
             MessageBox.Show("DELETED!");
         }
 
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            FillForm form = new FillForm();
+            if (this.activeTab == "tb_info") {
+                form.comboBox1.Text = "tb_info";
+                form.txtLN.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                form.txtFN.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                form.txtMN.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                form.txtAdd.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                form.txtBDate.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                form.txtBPlace.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                form.txtContact.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                form.cmbDept.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+                form.cmbJob.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                form.btnUpdate.Visible = true;
+                form.btnAdd.Visible = false;
+                form.activeID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                form.Show();
+            }
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e) {
+            try {
+                this.del_id = Convert.ToInt32(dataGridView3.CurrentRow.Cells[0].Value.ToString());
+            } catch { }
+        }
     }
 }

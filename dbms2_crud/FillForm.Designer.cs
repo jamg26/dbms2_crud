@@ -38,7 +38,7 @@
             this.txtContact = new System.Windows.Forms.TextBox();
             this.cmbDept = new System.Windows.Forms.ComboBox();
             this.cmbJob = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,13 +50,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.grp_tbinfo = new System.Windows.Forms.GroupBox();
             this.grp_tbdept = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.grp_tbjob = new System.Windows.Forms.GroupBox();
-            this.txtJob = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtJob = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.grp_tbinfo.SuspendLayout();
             this.grp_tbdept.SuspendLayout();
             this.grp_tbjob.SuspendLayout();
@@ -147,15 +148,15 @@
             this.cmbJob.Size = new System.Drawing.Size(121, 21);
             this.cmbJob.TabIndex = 9;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(396, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdd.Location = new System.Drawing.Point(396, 309);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -280,19 +281,14 @@
             this.grp_tbdept.Text = "tb_department";
             this.grp_tbdept.Visible = false;
             // 
-            // textBox1
+            // label11
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(23, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(332, 20);
-            this.textBox2.TabIndex = 1;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 68);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Description";
             // 
             // label10
             // 
@@ -303,14 +299,19 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Code";
             // 
-            // label11
+            // textBox2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Description";
+            this.textBox2.Location = new System.Drawing.Point(23, 84);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(332, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(23, 42);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // grp_tbjob
             // 
@@ -324,13 +325,6 @@
             this.grp_tbjob.Text = "tb_job";
             this.grp_tbjob.Visible = false;
             // 
-            // txtJob
-            // 
-            this.txtJob.Location = new System.Drawing.Point(23, 43);
-            this.txtJob.Name = "txtJob";
-            this.txtJob.Size = new System.Drawing.Size(171, 20);
-            this.txtJob.TabIndex = 0;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -340,15 +334,34 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Job Title";
             // 
+            // txtJob
+            // 
+            this.txtJob.Location = new System.Drawing.Point(23, 43);
+            this.txtJob.Name = "txtJob";
+            this.txtJob.Size = new System.Drawing.Size(171, 20);
+            this.txtJob.TabIndex = 0;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(396, 309);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // FillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 344);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.grp_tbinfo);
             this.Controls.Add(this.grp_tbjob);
             this.Controls.Add(this.grp_tbdept);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.comboBox1);
             this.Name = "FillForm";
             this.Text = "FillForm";
@@ -365,17 +378,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtFN;
-        private System.Windows.Forms.TextBox txtMN;
-        private System.Windows.Forms.TextBox txtLN;
-        private System.Windows.Forms.TextBox txtAdd;
-        private System.Windows.Forms.TextBox txtBDate;
-        private System.Windows.Forms.TextBox txtBPlace;
-        private System.Windows.Forms.TextBox txtContact;
-        private System.Windows.Forms.ComboBox cmbDept;
-        private System.Windows.Forms.ComboBox cmbJob;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -394,5 +396,17 @@
         private System.Windows.Forms.GroupBox grp_tbjob;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtJob;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.TextBox txtFN;
+        public System.Windows.Forms.TextBox txtMN;
+        public System.Windows.Forms.TextBox txtLN;
+        public System.Windows.Forms.TextBox txtAdd;
+        public System.Windows.Forms.TextBox txtBDate;
+        public System.Windows.Forms.TextBox txtBPlace;
+        public System.Windows.Forms.TextBox txtContact;
+        public System.Windows.Forms.ComboBox cmbDept;
+        public System.Windows.Forms.ComboBox cmbJob;
+        public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.Button btnAdd;
     }
 }
