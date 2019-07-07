@@ -128,10 +128,8 @@
             // 
             // cmbDept
             // 
+            this.cmbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDept.FormattingEnabled = true;
-            this.cmbDept.Items.AddRange(new object[] {
-            "HRD",
-            "ACCOUNTING"});
             this.cmbDept.Location = new System.Drawing.Point(274, 124);
             this.cmbDept.Name = "cmbDept";
             this.cmbDept.Size = new System.Drawing.Size(121, 21);
@@ -139,10 +137,8 @@
             // 
             // cmbJob
             // 
+            this.cmbJob.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJob.FormattingEnabled = true;
-            this.cmbJob.Items.AddRange(new object[] {
-            "STAFF",
-            "ACCOUNTING HEAD"});
             this.cmbJob.Location = new System.Drawing.Point(274, 162);
             this.cmbJob.Name = "cmbJob";
             this.cmbJob.Size = new System.Drawing.Size(121, 21);
@@ -358,9 +354,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 344);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.grp_tbinfo);
-            this.Controls.Add(this.grp_tbjob);
             this.Controls.Add(this.grp_tbdept);
+            this.Controls.Add(this.grp_tbjob);
+            this.Controls.Add(this.grp_tbinfo);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.comboBox1);
             this.Name = "FillForm";

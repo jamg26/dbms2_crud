@@ -44,8 +44,11 @@ namespace dbms2_crud {
         private void button1_Click(object sender, EventArgs e)
         {
             FillForm form = new FillForm();
+            form.getDept();
+            form.getJob();
             form.btnAdd.Visible = true;
             form.btnUpdate.Visible = false;
+            this.Hide();
             form.Show();
         }
 
@@ -73,6 +76,9 @@ namespace dbms2_crud {
             if (this.activeTab == "tb_job") {
                 db.dbDelete("DELETE FROM tb_job WHERE id=" + this.del_id);
             }
+            getInfoData();
+            getDeptData();
+            getJobData();
             MessageBox.Show("DELETED!");
         }
 
@@ -92,6 +98,7 @@ namespace dbms2_crud {
                 form.btnUpdate.Visible = true;
                 form.btnAdd.Visible = false;
                 form.activeID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                this.Hide();
                 form.Show();
             }
         }
@@ -115,6 +122,7 @@ namespace dbms2_crud {
                 form.txtCode.Text = dataGridView3.CurrentRow.Cells[1].Value.ToString();
                 form.txtDesc.Text = dataGridView3.CurrentRow.Cells[2].Value.ToString();
                 form.activeID = dataGridView3.CurrentRow.Cells[0].Value.ToString();
+                this.Hide();
                 form.Show();
             }
         }
@@ -133,8 +141,15 @@ namespace dbms2_crud {
                 form.btnAdd.Visible = false;
                 form.txtJob.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
                 form.activeID = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+                this.Hide();
                 form.Show();
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        
     }
 }
