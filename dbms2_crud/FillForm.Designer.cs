@@ -360,8 +360,10 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.comboBox1);
             this.Name = "FillForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FillForm";
             this.Load += new System.EventHandler(this.FillForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FillForm_FormClosed);
             this.grp_tbinfo.ResumeLayout(false);
             this.grp_tbinfo.PerformLayout();
             this.grp_tbdept.ResumeLayout(false);

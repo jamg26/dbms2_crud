@@ -70,8 +70,10 @@ namespace dbms2_crud
 
         private void btnUpdate_Click(object sender, EventArgs e) {
             dbClass db = new dbClass();
+            DataTable jb = db.dbSelect("SELECT id from tb_job WHERE description='" + cmbJob.Text + "'");
+            DataTable dp = db.dbSelect("SELECT id from tb_department WHERE code='" + cmbDept.Text + "'");
             if (this.activeForm == "tb_info") {
-                db.dbUpdate("UPDATE tb_info SET lastname='" + txtLN.Text + "', firstname='" + txtFN.Text + "', middlename='" + txtMN.Text + "', address='" + txtAdd.Text + "', birthdate='" + txtBDate.Text + "', birthplace='" + txtBPlace.Text + "', contact='" + txtContact.Text + "', department='" + Convert.ToInt32(cmbDept.SelectedIndex + 1) + "', job='" + Convert.ToInt32(cmbJob.SelectedIndex + 1) + "' WHERE id=" + this.activeID);
+                db.dbUpdate("UPDATE tb_info SET lastname='" + txtLN.Text + "', firstname='" + txtFN.Text + "', middlename='" + txtMN.Text + "', address='" + txtAdd.Text + "', birthdate='" + txtBDate.Text + "', birthplace='" + txtBPlace.Text + "', contact='" + txtContact.Text + "', department=" + dp.Rows[0][0].ToString() + ", job=" + jb.Rows[0][0].ToString() + " WHERE id=" + this.activeID);
             }
             if (this.activeForm == "tb_department") {
                 db.dbUpdate("UPDATE tb_department SET code='" + txtCode.Text + "', description='" + txtDesc.Text + "' WHERE id=" + this.activeID);
@@ -101,6 +103,11 @@ namespace dbms2_crud
             for (int i = 0; i < dt.Rows.Count; i++) {
                 cmbJob.Items.Add(dt.Rows[i]["description"]);
             }
+        }
+
+        private void FillForm_FormClosed(object sender, FormClosedEventArgs e) {
+            Main mm = new Main();
+            mm.Show();
         }
 
 

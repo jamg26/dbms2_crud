@@ -83,7 +83,12 @@ namespace dbms2_crud {
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            dbClass db = new dbClass();
+            DataTable jb = db.dbSelect("SELECT description from tb_job WHERE id=" + dataGridView1.CurrentRow.Cells[9].Value.ToString());
+            DataTable dp = db.dbSelect("SELECT code from tb_department WHERE id=" + dataGridView1.CurrentRow.Cells[8].Value.ToString());
             FillForm form = new FillForm();
+            form.getDept();
+            form.getJob();
             if (this.activeTab == "tb_info") {
                 form.comboBox1.Text = "tb_info";
                 form.txtLN.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -93,8 +98,8 @@ namespace dbms2_crud {
                 form.txtBDate.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
                 form.txtBPlace.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 form.txtContact.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                form.cmbDept.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                form.cmbJob.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
+                form.cmbDept.Text = dp.Rows[0][0].ToString();
+                form.cmbJob.Text = jb.Rows[0][0].ToString();
                 form.btnUpdate.Visible = true;
                 form.btnAdd.Visible = false;
                 form.activeID = dataGridView1.CurrentRow.Cells[0].Value.ToString();

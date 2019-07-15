@@ -156,6 +156,7 @@
             this.Controls.Add(this.tabtool1);
             this.Controls.Add(this.delBtn);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DATABASE MANAGEMENT SYSTEM 2 - CRUD";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
