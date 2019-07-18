@@ -55,6 +55,10 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.grp_tbjob = new System.Windows.Forms.GroupBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbParent = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -134,6 +138,7 @@
             this.cmbDept.Name = "cmbDept";
             this.cmbDept.Size = new System.Drawing.Size(121, 21);
             this.cmbDept.TabIndex = 8;
+            this.cmbDept.SelectedIndexChanged += new System.EventHandler(this.cmbDept_SelectedIndexChanged);
             // 
             // cmbJob
             // 
@@ -311,6 +316,10 @@
             // 
             // grp_tbjob
             // 
+            this.grp_tbjob.Controls.Add(this.txtSalary);
+            this.grp_tbjob.Controls.Add(this.label14);
+            this.grp_tbjob.Controls.Add(this.cmbParent);
+            this.grp_tbjob.Controls.Add(this.label13);
             this.grp_tbjob.Controls.Add(this.label12);
             this.grp_tbjob.Controls.Add(this.txtJob);
             this.grp_tbjob.Location = new System.Drawing.Point(26, 44);
@@ -320,6 +329,40 @@
             this.grp_tbjob.TabStop = false;
             this.grp_tbjob.Text = "tb_job";
             this.grp_tbjob.Visible = false;
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.Location = new System.Drawing.Point(230, 42);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(165, 20);
+            this.txtSalary.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(227, 25);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Salary";
+            // 
+            // cmbParent
+            // 
+            this.cmbParent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbParent.FormattingEnabled = true;
+            this.cmbParent.Location = new System.Drawing.Point(23, 105);
+            this.cmbParent.Name = "cmbParent";
+            this.cmbParent.Size = new System.Drawing.Size(171, 21);
+            this.cmbParent.TabIndex = 3;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(23, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 13);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Parent";
             // 
             // label12
             // 
@@ -354,9 +397,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 344);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.grp_tbdept);
-            this.Controls.Add(this.grp_tbjob);
             this.Controls.Add(this.grp_tbinfo);
+            this.Controls.Add(this.grp_tbjob);
+            this.Controls.Add(this.grp_tbdept);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.comboBox1);
             this.Name = "FillForm";
@@ -406,5 +449,9 @@
         public System.Windows.Forms.TextBox txtCode;
         public System.Windows.Forms.TextBox txtDesc;
         public System.Windows.Forms.TextBox txtJob;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.ComboBox cmbParent;
+        public System.Windows.Forms.TextBox txtSalary;
     }
 }

@@ -139,13 +139,18 @@ namespace dbms2_crud {
         }
 
         private void dataGridView2_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            dbClass db = new dbClass();
+            DataTable parent = db.dbSelect("SELECT code from tb_department WHERE id=" + dataGridView2.CurrentRow.Cells[2].Value.ToString());
             FillForm form = new FillForm();
+            form.getDept();
             if (this.activeTab == "tb_job") {
                 form.comboBox1.Text = "tb_job";
                 form.btnUpdate.Visible = true;
                 form.btnAdd.Visible = false;
-                form.txtJob.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
                 form.activeID = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+                form.txtJob.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+                form.cmbParent.Text = parent.Rows[0][0].ToString();
+                form.txtSalary.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
                 this.Hide();
                 form.Show();
             }
