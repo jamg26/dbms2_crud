@@ -31,7 +31,10 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabtool1.SuspendLayout();
             this.tb_info.SuspendLayout();
@@ -39,6 +42,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -53,7 +58,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // delBtn
             // 
@@ -70,6 +74,7 @@
             this.tabtool1.Controls.Add(this.tb_info);
             this.tabtool1.Controls.Add(this.tabPage2);
             this.tabtool1.Controls.Add(this.tabPage1);
+            this.tabtool1.Controls.Add(this.tabPage3);
             this.tabtool1.Location = new System.Drawing.Point(12, 60);
             this.tabtool1.Name = "tabtool1";
             this.tabtool1.SelectedIndex = 0;
@@ -137,6 +142,29 @@
             this.dataGridView2.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridView4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(837, 278);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "tb_employee";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.Size = new System.Drawing.Size(824, 265);
+            this.dataGridView4.TabIndex = 0;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(701, 31);
@@ -147,11 +175,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(432, 31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(263, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "CALCULATE INCOME";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 376);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabtool1);
             this.Controls.Add(this.delBtn);
@@ -166,6 +205,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,6 +222,9 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button button2;
     }
 }
 

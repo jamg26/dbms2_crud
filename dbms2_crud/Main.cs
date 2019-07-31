@@ -20,6 +20,7 @@ namespace dbms2_crud {
             getInfoData();
             getDeptData();
             getJobData();
+            getEmployee();
         }
 
         private void getInfoData()
@@ -76,9 +77,13 @@ namespace dbms2_crud {
             if (this.activeTab == "tb_job") {
                 db.dbDelete("DELETE FROM tb_job WHERE id=" + this.del_id);
             }
+            if (this.activeTab == "tb_employee") {
+                db.dbDelete("DELETE FROM tb_employees WHERE id=" + this.del_id);
+            }
             getInfoData();
             getDeptData();
             getJobData();
+            getEmployee();
             MessageBox.Show("DELETED!");
         }
 
@@ -156,10 +161,29 @@ namespace dbms2_crud {
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
+        private void getEmployee() {
+            dbClass db = new dbClass();
+            System.Data.DataTable dt = db.dbSelect("SELECT * FROM tb_employees ORDER BY id DESC");
+            dataGridView4.DataSource = dt;
         }
 
-        
+        private void calcIncome(int days, double gross, double overtime, int absences, double loans, double netpay) {
+            dbClass db = new dbClass();
+            DataTable getJob = db.dbSelect("SELECT job from tb_info WHERE id=" + this.del_id);
+            DataTable getJobs = db.dbSelect("SELECT salary from tb_job where id=" + getJob.Rows[0][0]);
+            MessageBox.Show(getJobs.Rows[0][0].ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            Income inc = new Income();
+            this.Hide();
+            inc.Show();
+        }
+
+        private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e) {
+            try {
+                this.del_id = Convert.ToInt32(dataGridView4.CurrentRow.Cells[0].Value.ToString());
+            } catch { }
+        }
     }
 }
