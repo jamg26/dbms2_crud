@@ -85,5 +85,10 @@ namespace dbms2_crud {
             main.Show();
             MessageBox.Show("Record added!");
         }
+
+        private void Income_FormClosed(object sender, FormClosedEventArgs e) {
+            Main main = new Main();
+            main.Show();
+        }
     }
 }

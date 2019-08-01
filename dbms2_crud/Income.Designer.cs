@@ -229,6 +229,7 @@
             this.Name = "Income";
             this.Text = "Income";
             this.Load += new System.EventHandler(this.Income_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Income_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAbsent)).EndInit();
