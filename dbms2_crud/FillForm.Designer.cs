@@ -62,6 +62,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblSal = new System.Windows.Forms.Label();
             this.grp_tbinfo.SuspendLayout();
             this.grp_tbdept.SuspendLayout();
             this.grp_tbjob.SuspendLayout();
@@ -148,6 +150,7 @@
             this.cmbJob.Name = "cmbJob";
             this.cmbJob.Size = new System.Drawing.Size(121, 21);
             this.cmbJob.TabIndex = 9;
+            this.cmbJob.SelectedIndexChanged += new System.EventHandler(this.cmbJob_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -242,6 +245,8 @@
             // 
             // grp_tbinfo
             // 
+            this.grp_tbinfo.Controls.Add(this.lblSal);
+            this.grp_tbinfo.Controls.Add(this.label15);
             this.grp_tbinfo.Controls.Add(this.label1);
             this.grp_tbinfo.Controls.Add(this.label9);
             this.grp_tbinfo.Controls.Add(this.txtFN);
@@ -391,6 +396,24 @@
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(271, 186);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 13);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Salary:";
+            // 
+            // lblSal
+            // 
+            this.lblSal.AutoSize = true;
+            this.lblSal.Location = new System.Drawing.Point(314, 186);
+            this.lblSal.Name = "lblSal";
+            this.lblSal.Size = new System.Drawing.Size(13, 13);
+            this.lblSal.TabIndex = 21;
+            this.lblSal.Text = "0";
+            // 
             // FillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,5 +476,7 @@
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.ComboBox cmbParent;
         public System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Label lblSal;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -119,7 +119,14 @@ namespace dbms2_crud
 
         private void cmbDept_SelectedIndexChanged(object sender, EventArgs e) {
             cmbJob.Items.Clear();
+            lblSal.Text = "0";
             getJob();
+        }
+
+        private void cmbJob_SelectedIndexChanged(object sender, EventArgs e) {
+            dbClass db = new dbClass();
+            DataTable sal = db.dbSelect("select salary from tb_job where description='" + cmbJob.Text + "'");
+            lblSal.Text = sal.Rows[0][0].ToString();
         }
 
     }
