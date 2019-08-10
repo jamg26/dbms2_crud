@@ -128,6 +128,5 @@ namespace dbms2_crud
             DataTable sal = db.dbSelect("select salary from tb_job where description='" + cmbJob.Text + "'");
             lblSal.Text = sal.Rows[0][0].ToString();
         }
-
     }
 }
