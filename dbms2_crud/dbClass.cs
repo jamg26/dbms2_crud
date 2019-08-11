@@ -11,10 +11,10 @@ namespace dbms2_crud {
         SqlConnection connect = getConnection();
 
         public static SqlConnection getConnection() {
-            string dbServer = "35.198.198.212";
+            string dbServer = "dbms.cohc7bcuo0vm.ap-southeast-1.rds.amazonaws.com";
             string dbName = "dbms_galicia";
-            string dbUser = "sa";
-            SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=Jamuel1226;");
+            string dbUser = "admin";
+            SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=amazonrds;");
             return conn;
         }
 
