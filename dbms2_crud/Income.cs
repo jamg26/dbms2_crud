@@ -57,11 +57,15 @@ namespace dbms2_crud {
         private void calcGross(decimal salary, int workDays, int ot) {
             this.gross_pay = (salary * workDays) + (ot * 40);
             txtNetGross.Text = this.gross_pay.ToString();
+            lblNetGross.Text = this.gross_pay.ToString();
         }
 
         private void calcNet(int absences, decimal loans) { 
             this.net_pay = (this.gross_pay - (this.salary * numAbsent.Value)) - loans;
             txtNetPay.Text = this.net_pay.ToString();
+            lblLoans.Text = loans.ToString();
+            lblAbs.Text = (this.salary * numAbsent.Value).ToString();
+            lblNetPay.Text = this.net_pay.ToString();
         }
 
         private void numAbsent_ValueChanged(object sender, EventArgs e) {
@@ -99,15 +103,25 @@ namespace dbms2_crud {
 
         private void checkPagibig_CheckedChanged(object sender, EventArgs e) {
             txtPagibigLoans.Enabled = checkPagibig.Checked;
+            if (!txtPagibigLoans.Enabled) {
+                txtPagibigLoans.Text = "0.00";
+            }
         }
 
         private void checkSSS_CheckedChanged(object sender, EventArgs e) {
             txtSSSLoans.Enabled = checkSSS.Checked;
+            if (!txtSSSLoans.Enabled) {
+                txtSSSLoans.Text = "0.00";
+            }
         }
 
         private void checkOther_CheckedChanged(object sender, EventArgs e) {
             txtOtherLoans.Enabled = checkOther.Checked;
             txtOtherLoansName.Enabled = checkOther.Checked;
+            if (!txtOtherLoans.Enabled) {
+                txtOtherLoans.Text = "0.00";
+                txtOtherLoansName.Text = "Name";
+            }
         }
 
         private void txtPagibigLoans_Enter(object sender, EventArgs e) {
@@ -173,5 +187,9 @@ namespace dbms2_crud {
         private void txtPremSSS_Enter(object sender, EventArgs e) {
             txtPremSSS.Text = "";
         }
+
+        
+
+       
     }
 }
