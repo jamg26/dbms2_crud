@@ -29,6 +29,7 @@ namespace dbms2_crud {
             System.Data.DataTable dt = db.dbSelect("SELECT * FROM tb_info ORDER BY id DESC");
             dataGridView1.DataSource = dt;
         }
+
         private void getDeptData()
         {
             dbClass db = new dbClass();
@@ -187,7 +188,19 @@ namespace dbms2_crud {
         }
 
         private void informationsToolStripMenuItem_Click(object sender, EventArgs e) {
-            
+            new Print_Info().Show();
+        }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e) {
+            MessageBox.Show("Select employee and click print button.");
+            btn_print_info.Visible = true;
+        }
+
+        private void btn_print_info_Click(object sender, EventArgs e) {
+            MessageBox.Show("the id is " + this.del_id);
+            Print_Ind ind = new Print_Ind();
+            ind.id = this.del_id;
+            ind.Show();
         }
     }
 }

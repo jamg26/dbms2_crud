@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.delBtn = new System.Windows.Forms.Button();
             this.tabtool1 = new System.Windows.Forms.TabControl();
@@ -41,6 +41,7 @@
             this.informationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.payslipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_print_info = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabtool1.SuspendLayout();
             this.tb_info.SuspendLayout();
@@ -57,8 +58,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
@@ -234,6 +235,7 @@
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.employeeToolStripMenuItem.Text = "Employee";
+            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // payslipToolStripMenuItem
             // 
@@ -241,11 +243,23 @@
             this.payslipToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.payslipToolStripMenuItem.Text = "Payslip";
             // 
+            // btn_print_info
+            // 
+            this.btn_print_info.Location = new System.Drawing.Point(13, 31);
+            this.btn_print_info.Name = "btn_print_info";
+            this.btn_print_info.Size = new System.Drawing.Size(75, 23);
+            this.btn_print_info.TabIndex = 6;
+            this.btn_print_info.Text = "PRINT";
+            this.btn_print_info.UseVisualStyleBackColor = true;
+            this.btn_print_info.Visible = false;
+            this.btn_print_info.Click += new System.EventHandler(this.btn_print_info_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 376);
+            this.Controls.Add(this.btn_print_info);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabtool1);
@@ -291,6 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem informationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem payslipToolStripMenuItem;
+        private System.Windows.Forms.Button btn_print_info;
     }
 }
 

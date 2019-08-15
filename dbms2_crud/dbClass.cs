@@ -14,7 +14,7 @@ namespace dbms2_crud {
             string dbServer = "dbms.cohc7bcuo0vm.ap-southeast-1.rds.amazonaws.com";
             string dbName = "dbms_galicia";
             string dbUser = "admin";
-            SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=amazonrds;");
+            SqlConnection conn = new SqlConnection("Data Source = " + dbServer + "; Initial Catalog = " + dbName + "; User ID=" + dbUser + ";Password=dbmsadmin;");
             return conn;
         }
 

@@ -1,5 +1,5 @@
 ﻿namespace dbms2_crud {
-    partial class Print_Info {
+    partial class Print_Ind {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,43 +24,29 @@
         /// </summary>
         private void InitializeComponent() {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReport_info1 = new dbms2_crud.CrystalReport_info();
+            this.CrystalReport_ind1 = new dbms2_crud.CrystalReport_ind();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(869, 374);
+            this.crystalReportViewer1.ReportSource = this.CrystalReport_ind1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(711, 396);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
-            // crystalReportViewer2
-            // 
-            this.crystalReportViewer2.ActiveViewIndex = 0;
-            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer2.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer2.Name = "crystalReportViewer2";
-            this.crystalReportViewer2.ReportSource = this.CrystalReport_info1;
-            this.crystalReportViewer2.Size = new System.Drawing.Size(869, 374);
-            this.crystalReportViewer2.TabIndex = 1;
-            // 
-            // Print_Info
+            // Print_Ind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 374);
-            this.Controls.Add(this.crystalReportViewer2);
+            this.ClientSize = new System.Drawing.Size(711, 396);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "Print_Info";
-            this.Text = "Print_Info";
-            this.Load += new System.EventHandler(this.Print_Info_Load);
+            this.Name = "Print_Ind";
+            this.Text = "Print_Ind";
+            this.Load += new System.EventHandler(this.Print_Ind_Load);
             this.ResumeLayout(false);
 
         }
@@ -68,7 +54,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private CrystalReport_info CrystalReport_info1;
-        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private CrystalReport_ind CrystalReport_ind1;
     }
 }

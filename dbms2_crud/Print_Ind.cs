@@ -8,12 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace dbms2_crud {
-    public partial class Print_Info : Form {
-        public Print_Info() {
+    public partial class Print_Ind : Form {
+        public int id;
+        public Print_Ind() {
             InitializeComponent();
         }
 
-        private void Print_Info_Load(object sender, EventArgs e) {
+        private void Print_Ind_Load(object sender, EventArgs e) {
+            crystalReportViewer1.SelectionFormula = "{tb_info.id} = " + id;
         }
     }
 }
