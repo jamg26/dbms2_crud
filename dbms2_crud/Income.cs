@@ -58,14 +58,18 @@ namespace dbms2_crud {
             this.gross_pay = (salary * workDays) + (ot * 40);
             txtNetGross.Text = this.gross_pay.ToString();
             lblNetGross.Text = this.gross_pay.ToString();
+            lblBasicPay.Text = (salary * workDays).ToString();
+            lblOTPay.Text = (ot * 40).ToString();
         }
 
         private void calcNet(int absences, decimal loans) { 
             this.net_pay = (this.gross_pay - (this.salary * numAbsent.Value)) - loans;
             txtNetPay.Text = this.net_pay.ToString();
-            lblLoans.Text = loans.ToString();
+            labelLoans.Text = (Convert.ToDecimal(txtPagibigLoans.Text) + Convert.ToDecimal(txtSSSLoans.Text) + Convert.ToDecimal(txtOtherLoans.Text)).ToString();
+            lblPremLoans.Text = (Convert.ToDecimal(txtPremPagibig.Text) + Convert.ToDecimal(txtPremSSS.Text) + Convert.ToDecimal(txtPremPhil.Text)).ToString();
             lblAbs.Text = (this.salary * numAbsent.Value).ToString();
             lblNetPay.Text = this.net_pay.ToString();
+            lblTotalDeductions.Text = (Convert.ToDecimal(txtLoans.Text) + Convert.ToDecimal(lblAbs.Text)).ToString();
         }
 
         private void numAbsent_ValueChanged(object sender, EventArgs e) {
@@ -85,7 +89,7 @@ namespace dbms2_crud {
             if (this.txtNetPay.Text != "0.00") {
                 dbClass db = new dbClass();
                 DateTime date = DateTime.Now;
-                String query = "insert into tb_employees (fullname, no_of_days, gross_income, overtime_hrs, no_of_absences, loans, net_pay, date) values ('" + cmbEmployees.Text + "', " + numWorkDays.Value + ", " + this.gross_pay + ", " + numOT.Value + ", " + numAbsent.Value + ", " + txtLoans.Text + ", " + txtNetPay.Text + ", '" + date + "')";
+                String query = "insert into tb_employee (fullname, no_of_days, gross_income, overtime_hrs, no_of_absences, loan_pagibig, loan_sss, loan_other_name, loan_other, prem_pagibig, prem_sss, prem_philhealth, total_loans, total_prem_loans, total_deduction, net_pay, date) values ('" + cmbEmployees.Text + "', " + numWorkDays.Value + ", " + this.gross_pay + ", " + numOT.Value + ", " + numAbsent.Value + ", " + txtPagibigLoans.Text + ", " + txtSSSLoans.Text + ", '" + txtOtherLoansName.Text + "', " + txtOtherLoans.Text + ", " + txtPremPagibig.Text + ", " + txtPremSSS.Text + ", " + txtPremPhil.Text + ", " + labelLoans.Text + ", " + lblPremLoans.Text + ", " + lblTotalDeductions.Text + ", " + txtNetPay.Text + ", '" + date + "')";
                 db.dbInsert(query);
                 Main main = new Main();
                 this.Hide();
@@ -125,11 +129,15 @@ namespace dbms2_crud {
         }
 
         private void txtPagibigLoans_Enter(object sender, EventArgs e) {
-            txtPagibigLoans.Text = "";
+            if (txtPagibigLoans.Text == "0.00") {
+                txtPagibigLoans.Text = "";
+            }
         }
 
         private void txtSSSLoans_Enter(object sender, EventArgs e) {
-            txtSSSLoans.Text = "";
+            if (txtSSSLoans.Text == "0.00") {
+                txtSSSLoans.Text = "";
+            }
         }
 
         private void txtOtherLoansName_Enter(object sender, EventArgs e) {
@@ -137,7 +145,9 @@ namespace dbms2_crud {
         }
 
         private void txtOtherLoans_Enter(object sender, EventArgs e) {
-            txtOtherLoans.Text = "";
+            if (txtOtherLoans.Text == "0.00") {
+                txtOtherLoans.Text = "";
+            }
         }
 
         private void txtSalary_Enter(object sender, EventArgs e) {
@@ -177,19 +187,61 @@ namespace dbms2_crud {
         }
 
         private void txtPremPagibig_Enter(object sender, EventArgs e) {
-            txtPremPagibig.Text = "";
+            if (txtPremPagibig.Text == "0.00") {
+                txtPremPagibig.Text = "";
+            }
         }
 
         private void txtPremPhil_Enter(object sender, EventArgs e) {
-            txtPremPhil.Text = "";
+            if (txtPremPhil.Text == "0.00") {
+                txtPremPhil.Text = "";
+            }
         }
 
         private void txtPremSSS_Enter(object sender, EventArgs e) {
-            txtPremSSS.Text = "";
+            if (txtPremSSS.Text == "0.00") {
+                txtPremSSS.Text = "";
+            }
         }
 
-        
+        private void txtPremPagibig_Leave(object sender, EventArgs e) {
+            if (txtPremPagibig.Text == "") {
+                txtPremPagibig.Text = "0.00";
+            }
+        }
 
-       
+        private void txtPremSSS_Leave(object sender, EventArgs e) {
+            if (txtPremSSS.Text == "") {
+                txtPremSSS.Text = "0.00"; 
+            }
+        }
+
+        private void txtPremPhil_Leave(object sender, EventArgs e) {
+            if (txtPremPhil.Text == "") {
+                txtPremPhil.Text = "0.00";
+            }
+        }
+
+        private void txtPagibigLoans_Leave(object sender, EventArgs e) {
+            if (txtPagibigLoans.Text == "") {
+                txtPagibigLoans.Text = "0.00";
+            }
+        }
+
+        private void txtSSSLoans_Leave(object sender, EventArgs e) {
+            if (txtSSSLoans.Text == "") {
+                txtSSSLoans.Text = "0.00";
+            }
+        }
+
+        private void txtOtherLoans_Leave(object sender, EventArgs e) {
+            if (txtOtherLoans.Text == "") {
+                txtOtherLoans.Text = "0.00";
+            }
+        }
+
+        private void txtOtherLoansName_Leave(object sender, EventArgs e) {
+
+        }
     }
 }

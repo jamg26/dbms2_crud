@@ -78,7 +78,7 @@ namespace dbms2_crud {
                 db.dbDelete("DELETE FROM tb_job WHERE id=" + this.del_id);
             }
             if (this.activeTab == "tb_employee") {
-                db.dbDelete("DELETE FROM tb_employees WHERE id=" + this.del_id);
+                db.dbDelete("DELETE FROM tb_employee WHERE id=" + this.del_id);
             }
             getInfoData();
             getDeptData();
@@ -163,7 +163,7 @@ namespace dbms2_crud {
 
         private void getEmployee() {
             dbClass db = new dbClass();
-            System.Data.DataTable dt = db.dbSelect("SELECT * FROM tb_employees ORDER BY id DESC");
+            System.Data.DataTable dt = db.dbSelect("SELECT * FROM tb_employee ORDER BY id DESC");
             dataGridView4.DataSource = dt;
         }
 
@@ -184,6 +184,10 @@ namespace dbms2_crud {
             try {
                 this.del_id = Convert.ToInt32(dataGridView4.CurrentRow.Cells[0].Value.ToString());
             } catch { }
+        }
+
+        private void informationsToolStripMenuItem_Click(object sender, EventArgs e) {
+            
         }
     }
 }
