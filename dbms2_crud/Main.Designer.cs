@@ -39,9 +39,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.payslipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_print_info = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabtool1.SuspendLayout();
             this.tb_info.SuspendLayout();
@@ -179,6 +176,7 @@
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.Size = new System.Drawing.Size(824, 265);
             this.dataGridView4.TabIndex = 0;
+            this.dataGridView4.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentDoubleClick);
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             // 
             // button1
@@ -216,9 +214,7 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informationsToolStripMenuItem,
-            this.employeeToolStripMenuItem,
-            this.payslipToolStripMenuItem});
+            this.informationsToolStripMenuItem});
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.printToolStripMenuItem.Text = "Print";
@@ -230,36 +226,11 @@
             this.informationsToolStripMenuItem.Text = "Informations";
             this.informationsToolStripMenuItem.Click += new System.EventHandler(this.informationsToolStripMenuItem_Click);
             // 
-            // employeeToolStripMenuItem
-            // 
-            this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.employeeToolStripMenuItem.Text = "Employee";
-            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
-            // 
-            // payslipToolStripMenuItem
-            // 
-            this.payslipToolStripMenuItem.Name = "payslipToolStripMenuItem";
-            this.payslipToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.payslipToolStripMenuItem.Text = "Payslip";
-            // 
-            // btn_print_info
-            // 
-            this.btn_print_info.Location = new System.Drawing.Point(13, 31);
-            this.btn_print_info.Name = "btn_print_info";
-            this.btn_print_info.Size = new System.Drawing.Size(75, 23);
-            this.btn_print_info.TabIndex = 6;
-            this.btn_print_info.Text = "PRINT";
-            this.btn_print_info.UseVisualStyleBackColor = true;
-            this.btn_print_info.Visible = false;
-            this.btn_print_info.Click += new System.EventHandler(this.btn_print_info_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 376);
-            this.Controls.Add(this.btn_print_info);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabtool1);
@@ -303,9 +274,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem payslipToolStripMenuItem;
-        private System.Windows.Forms.Button btn_print_info;
     }
 }
 

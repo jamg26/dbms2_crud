@@ -16,6 +16,8 @@ namespace dbms2_crud {
 
         private void Print_Ind_Load(object sender, EventArgs e) {
             crystalReportViewer1.SelectionFormula = "{tb_info.id} = " + id;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

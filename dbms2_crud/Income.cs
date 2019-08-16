@@ -25,16 +25,20 @@ namespace dbms2_crud {
         }
 
         private void cmbEmployees_SelectedIndexChanged(object sender, EventArgs e) {
-            DataTable id, job, salary;
+            DataTable id, job, salary, get_job, get_dept;
             txtNetGross.Text = "";
             dbClass db = new dbClass();
             String[] name = cmbEmployees.Text.Split(' ');
             id = db.dbSelect("select id from tb_info where firstname='" + name[0] + "' and lastname ='" + name[1] + "'");
             this.id = Convert.ToInt32(id.Rows[0][0]);
             job = db.dbSelect("select job from tb_info where id=" + this.id);
+            get_job = db.dbSelect("select description, parent from tb_job where id=" + job.Rows[0][0]);
+            get_dept = db.dbSelect("select description from tb_department where id=" + get_job.Rows[0][1]);
             salary = db.dbSelect("select salary from tb_job where id=" + job.Rows[0][0]);
             this.salary = Convert.ToDecimal(salary.Rows[0][0]);
             txtSalary.Text = salary.Rows[0][0].ToString();
+            lblDept.Text = get_dept.Rows[0][0].ToString();
+            lblJob.Text = get_job.Rows[0][0].ToString();
             try {
                 calcGross(Convert.ToDecimal(salary.Rows[0][0]), Convert.ToInt32(numWorkDays.Value), Convert.ToInt32(numOT.Value));
                 calcNet(Convert.ToInt32(numAbsent.Value), Convert.ToDecimal(txtLoans.Text));
@@ -89,7 +93,7 @@ namespace dbms2_crud {
             if (this.txtNetPay.Text != "0.00") {
                 dbClass db = new dbClass();
                 DateTime date = DateTime.Now;
-                String query = "insert into tb_employee (fullname, no_of_days, gross_income, overtime_hrs, no_of_absences, loan_pagibig, loan_sss, loan_other_name, loan_other, prem_pagibig, prem_sss, prem_philhealth, total_loans, total_prem_loans, total_deduction, net_pay, date) values ('" + cmbEmployees.Text + "', " + numWorkDays.Value + ", " + this.gross_pay + ", " + numOT.Value + ", " + numAbsent.Value + ", " + txtPagibigLoans.Text + ", " + txtSSSLoans.Text + ", '" + txtOtherLoansName.Text + "', " + txtOtherLoans.Text + ", " + txtPremPagibig.Text + ", " + txtPremSSS.Text + ", " + txtPremPhil.Text + ", " + labelLoans.Text + ", " + lblPremLoans.Text + ", " + lblTotalDeductions.Text + ", " + txtNetPay.Text + ", '" + date + "')";
+                String query = "insert into tb_employee (fullname, department, job, rate, no_of_days, gross_income, overtime_hrs, no_of_absences, loan_pagibig, loan_sss, loan_other_name, loan_other, prem_pagibig, prem_sss, prem_philhealth, total_loans, total_prem_loans, total_deduction, net_pay, date) values ('" + cmbEmployees.Text + "', '" + lblDept.Text + "', '" + lblJob.Text + "', " + txtSalary.Text  + ", " + numWorkDays.Value + ", " + this.gross_pay + ", " + numOT.Value + ", " + numAbsent.Value + ", " + txtPagibigLoans.Text + ", " + txtSSSLoans.Text + ", '" + txtOtherLoansName.Text + "', " + txtOtherLoans.Text + ", " + txtPremPagibig.Text + ", " + txtPremSSS.Text + ", " + txtPremPhil.Text + ", " + labelLoans.Text + ", " + lblPremLoans.Text + ", " + lblTotalDeductions.Text + ", " + txtNetPay.Text + ", '" + date + "')";
                 db.dbInsert(query);
                 Main main = new Main();
                 this.Hide();

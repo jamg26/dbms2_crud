@@ -57,10 +57,19 @@
             this.checkOther = new System.Windows.Forms.CheckBox();
             this.txtPagibigLoans = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblTotalDeductions = new System.Windows.Forms.Label();
+            this.lblPremLoans = new System.Windows.Forms.Label();
+            this.labelLoans = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.lblOTPay = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lblBasicPay = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,15 +80,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.labelLoans = new System.Windows.Forms.Label();
-            this.lblPremLoans = new System.Windows.Forms.Label();
-            this.lblTotalDeductions = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblDept = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lblJob = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAbsent)).BeginInit();
@@ -497,6 +501,10 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.lblJob);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.lblDept);
+            this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.lblTotalDeductions);
             this.groupBox5.Controls.Add(this.lblPremLoans);
             this.groupBox5.Controls.Add(this.labelLoans);
@@ -528,11 +536,82 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "SUMMARY";
             // 
+            // lblTotalDeductions
+            // 
+            this.lblTotalDeductions.AutoSize = true;
+            this.lblTotalDeductions.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDeductions.Location = new System.Drawing.Point(182, 320);
+            this.lblTotalDeductions.Name = "lblTotalDeductions";
+            this.lblTotalDeductions.Size = new System.Drawing.Size(14, 14);
+            this.lblTotalDeductions.TabIndex = 14;
+            this.lblTotalDeductions.Text = "-";
+            // 
+            // lblPremLoans
+            // 
+            this.lblPremLoans.AutoSize = true;
+            this.lblPremLoans.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPremLoans.Location = new System.Drawing.Point(182, 293);
+            this.lblPremLoans.Name = "lblPremLoans";
+            this.lblPremLoans.Size = new System.Drawing.Size(14, 14);
+            this.lblPremLoans.TabIndex = 13;
+            this.lblPremLoans.Text = "-";
+            // 
+            // labelLoans
+            // 
+            this.labelLoans.AutoSize = true;
+            this.labelLoans.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoans.Location = new System.Drawing.Point(182, 269);
+            this.labelLoans.Name = "labelLoans";
+            this.labelLoans.Size = new System.Drawing.Size(14, 14);
+            this.labelLoans.TabIndex = 12;
+            this.labelLoans.Text = "-";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(20, 320);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(119, 14);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "Total Deductions";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(43, 315);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(1);
+            this.panel2.Size = new System.Drawing.Size(230, 2);
+            this.panel2.TabIndex = 10;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(41, 293);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(98, 14);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Premium Loans";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(97, 269);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(42, 14);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "Loans";
+            // 
             // lblOTPay
             // 
             this.lblOTPay.AutoSize = true;
             this.lblOTPay.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOTPay.Location = new System.Drawing.Point(177, 81);
+            this.lblOTPay.Location = new System.Drawing.Point(182, 129);
             this.lblOTPay.Name = "lblOTPay";
             this.lblOTPay.Size = new System.Drawing.Size(14, 14);
             this.lblOTPay.TabIndex = 7;
@@ -542,7 +621,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(43, 83);
+            this.label17.Location = new System.Drawing.Point(48, 131);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(91, 14);
             this.label17.TabIndex = 6;
@@ -552,7 +631,7 @@
             // 
             this.lblBasicPay.AutoSize = true;
             this.lblBasicPay.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBasicPay.Location = new System.Drawing.Point(177, 63);
+            this.lblBasicPay.Location = new System.Drawing.Point(182, 111);
             this.lblBasicPay.Name = "lblBasicPay";
             this.lblBasicPay.Size = new System.Drawing.Size(14, 14);
             this.lblBasicPay.TabIndex = 5;
@@ -562,17 +641,37 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(64, 63);
+            this.label15.Location = new System.Drawing.Point(69, 111);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 14);
             this.label15.TabIndex = 4;
             this.label15.Text = "Basic Pay";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(182, 216);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 14);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Amount";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(44, 216);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(95, 14);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Description";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(177, 36);
+            this.label13.Location = new System.Drawing.Point(182, 84);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 14);
             this.label13.TabIndex = 3;
@@ -582,7 +681,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(39, 36);
+            this.label12.Location = new System.Drawing.Point(44, 84);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 14);
             this.label12.TabIndex = 2;
@@ -593,7 +692,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(38, 105);
+            this.panel1.Location = new System.Drawing.Point(43, 153);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(1);
             this.panel1.Size = new System.Drawing.Size(230, 2);
@@ -613,7 +712,7 @@
             // 
             this.lblNetGross.AutoSize = true;
             this.lblNetGross.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNetGross.Location = new System.Drawing.Point(177, 113);
+            this.lblNetGross.Location = new System.Drawing.Point(182, 161);
             this.lblNetGross.Name = "lblNetGross";
             this.lblNetGross.Size = new System.Drawing.Size(14, 14);
             this.lblNetGross.TabIndex = 0;
@@ -623,7 +722,7 @@
             // 
             this.lblAbs.AutoSize = true;
             this.lblAbs.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbs.Location = new System.Drawing.Point(177, 198);
+            this.lblAbs.Location = new System.Drawing.Point(182, 246);
             this.lblAbs.Name = "lblAbs";
             this.lblAbs.Size = new System.Drawing.Size(14, 14);
             this.lblAbs.TabIndex = 0;
@@ -643,7 +742,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(64, 113);
+            this.label14.Location = new System.Drawing.Point(69, 161);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(70, 14);
             this.label14.TabIndex = 0;
@@ -653,7 +752,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 198);
+            this.label5.Location = new System.Drawing.Point(76, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 14);
             this.label5.TabIndex = 0;
@@ -663,101 +762,50 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(120, 127);
+            this.label4.Location = new System.Drawing.Point(125, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 14);
             this.label4.TabIndex = 0;
             // 
-            // label16
+            // label10
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(39, 168);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(95, 14);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Description";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 14);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Department";
             // 
-            // label18
+            // lblDept
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(177, 168);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 14);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Amount";
+            this.lblDept.AutoSize = true;
+            this.lblDept.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDept.Location = new System.Drawing.Point(113, 33);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(14, 14);
+            this.lblDept.TabIndex = 16;
+            this.lblDept.Text = "-";
             // 
-            // label19
+            // label23
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(92, 221);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 14);
-            this.label19.TabIndex = 8;
-            this.label19.Text = "Loans";
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(76, 47);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(31, 14);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Job";
             // 
-            // label20
+            // lblJob
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(36, 245);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 14);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "Premium Loans";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(38, 267);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(230, 2);
-            this.panel2.TabIndex = 10;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(15, 272);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(119, 14);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "Total Deductions";
-            // 
-            // labelLoans
-            // 
-            this.labelLoans.AutoSize = true;
-            this.labelLoans.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoans.Location = new System.Drawing.Point(177, 221);
-            this.labelLoans.Name = "labelLoans";
-            this.labelLoans.Size = new System.Drawing.Size(14, 14);
-            this.labelLoans.TabIndex = 12;
-            this.labelLoans.Text = "-";
-            // 
-            // lblPremLoans
-            // 
-            this.lblPremLoans.AutoSize = true;
-            this.lblPremLoans.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPremLoans.Location = new System.Drawing.Point(177, 245);
-            this.lblPremLoans.Name = "lblPremLoans";
-            this.lblPremLoans.Size = new System.Drawing.Size(14, 14);
-            this.lblPremLoans.TabIndex = 13;
-            this.lblPremLoans.Text = "-";
-            // 
-            // lblTotalDeductions
-            // 
-            this.lblTotalDeductions.AutoSize = true;
-            this.lblTotalDeductions.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDeductions.Location = new System.Drawing.Point(177, 272);
-            this.lblTotalDeductions.Name = "lblTotalDeductions";
-            this.lblTotalDeductions.Size = new System.Drawing.Size(14, 14);
-            this.lblTotalDeductions.TabIndex = 14;
-            this.lblTotalDeductions.Text = "-";
+            this.lblJob.AutoSize = true;
+            this.lblJob.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJob.Location = new System.Drawing.Point(113, 47);
+            this.lblJob.Name = "lblJob";
+            this.lblJob.Size = new System.Drawing.Size(14, 14);
+            this.lblJob.TabIndex = 18;
+            this.lblJob.Text = "-";
             // 
             // Income
             // 
@@ -849,6 +897,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPremLoans;
         private System.Windows.Forms.Label lblTotalDeductions;
+        private System.Windows.Forms.Label lblJob;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblDept;
+        private System.Windows.Forms.Label label10;
 
 
     }

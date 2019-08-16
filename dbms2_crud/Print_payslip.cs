@@ -8,15 +8,16 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace dbms2_crud {
-    public partial class Print_Info : Form {
-        public Print_Info() {
+    public partial class Print_payslip : Form {
+        public int id;
+        public Print_payslip() {
             InitializeComponent();
         }
 
-        private void Print_Info_Load(object sender, EventArgs e) {
+        private void Print_payslip_Load(object sender, EventArgs e) {
+            crystalReportViewer1.SelectionFormula = "{tb_employee.id} = " + id;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
         }
-
     }
 }

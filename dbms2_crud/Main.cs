@@ -89,28 +89,35 @@ namespace dbms2_crud {
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
-            dbClass db = new dbClass();
-            DataTable jb = db.dbSelect("SELECT description from tb_job WHERE id=" + dataGridView1.CurrentRow.Cells[9].Value.ToString());
-            DataTable dp = db.dbSelect("SELECT code from tb_department WHERE id=" + dataGridView1.CurrentRow.Cells[8].Value.ToString());
-            FillForm form = new FillForm();
-            form.getDept();
-            form.getJob();
-            if (this.activeTab == "tb_info") {
-                form.comboBox1.Text = "tb_info";
-                form.txtLN.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                form.txtFN.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                form.txtMN.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                form.txtAdd.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                form.txtBDate.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                form.txtBPlace.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                form.txtContact.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                form.cmbDept.Text = dp.Rows[0][0].ToString();
-                form.cmbJob.Text = jb.Rows[0][0].ToString();
-                form.btnUpdate.Visible = true;
-                form.btnAdd.Visible = false;
-                form.activeID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                this.Hide();
-                form.Show();
+            DialogResult result = MessageBox.Show("Click YES to edit info press NO to print.", "Action", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.No)) {
+                Print_Ind ind = new Print_Ind();
+                ind.id = this.del_id;
+                ind.Show();
+            } else {
+                dbClass db = new dbClass();
+                DataTable jb = db.dbSelect("SELECT description from tb_job WHERE id=" + dataGridView1.CurrentRow.Cells[9].Value.ToString());
+                DataTable dp = db.dbSelect("SELECT code from tb_department WHERE id=" + dataGridView1.CurrentRow.Cells[8].Value.ToString());
+                FillForm form = new FillForm();
+                form.getDept();
+                form.getJob();
+                if (this.activeTab == "tb_info") {
+                    form.comboBox1.Text = "tb_info";
+                    form.txtLN.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    form.txtFN.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                    form.txtMN.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    form.txtAdd.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                    form.txtBDate.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                    form.txtBPlace.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                    form.txtContact.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+                    form.cmbDept.Text = dp.Rows[0][0].ToString();
+                    form.cmbJob.Text = jb.Rows[0][0].ToString();
+                    form.btnUpdate.Visible = true;
+                    form.btnAdd.Visible = false;
+                    form.activeID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    this.Hide();
+                    form.Show();
+                }
             }
         }
 
@@ -191,16 +198,17 @@ namespace dbms2_crud {
             new Print_Info().Show();
         }
 
-        private void employeeToolStripMenuItem_Click(object sender, EventArgs e) {
-            MessageBox.Show("Select employee and click print button.");
-            btn_print_info.Visible = true;
-        }
+        private void dataGridView4_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            DialogResult result = MessageBox.Show("Print payslip?", "PAYSLIP", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK)) {
+                Print_payslip pay = new Print_payslip();
+                pay.id = this.del_id;
+                pay.Show();
+            
+            } else {
 
-        private void btn_print_info_Click(object sender, EventArgs e) {
-            MessageBox.Show("the id is " + this.del_id);
-            Print_Ind ind = new Print_Ind();
-            ind.id = this.del_id;
-            ind.Show();
+            }
+            
         }
     }
 }
