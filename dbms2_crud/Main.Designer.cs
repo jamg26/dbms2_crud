@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.delBtn = new System.Windows.Forms.Button();
             this.tabtool1 = new System.Windows.Forms.TabControl();
@@ -55,21 +55,25 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(825, 266);
+            this.dataGridView1.Size = new System.Drawing.Size(920, 338);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // delBtn
             // 
+            this.delBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delBtn.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delBtn.Location = new System.Drawing.Point(782, 31);
+            this.delBtn.Location = new System.Drawing.Point(877, 31);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(75, 23);
             this.delBtn.TabIndex = 1;
@@ -87,7 +91,7 @@
             this.tabtool1.Location = new System.Drawing.Point(12, 60);
             this.tabtool1.Name = "tabtool1";
             this.tabtool1.SelectedIndex = 0;
-            this.tabtool1.Size = new System.Drawing.Size(845, 304);
+            this.tabtool1.Size = new System.Drawing.Size(940, 377);
             this.tabtool1.TabIndex = 2;
             this.tabtool1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabtool1_Selected);
             // 
@@ -98,7 +102,7 @@
             this.tb_info.Location = new System.Drawing.Point(4, 23);
             this.tb_info.Name = "tb_info";
             this.tb_info.Padding = new System.Windows.Forms.Padding(3);
-            this.tb_info.Size = new System.Drawing.Size(837, 277);
+            this.tb_info.Size = new System.Drawing.Size(932, 350);
             this.tb_info.TabIndex = 0;
             this.tb_info.Text = "tb_info";
             this.tb_info.UseVisualStyleBackColor = true;
@@ -110,7 +114,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(837, 277);
+            this.tabPage2.Size = new System.Drawing.Size(932, 350);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tb_department";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -119,11 +123,14 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(7, 7);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(824, 265);
+            this.dataGridView3.Size = new System.Drawing.Size(919, 337);
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentDoubleClick);
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
@@ -136,7 +143,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(837, 277);
+            this.tabPage1.Size = new System.Drawing.Size(932, 350);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tb_job";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -145,11 +152,14 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(7, 7);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(824, 265);
+            this.dataGridView2.Size = new System.Drawing.Size(919, 337);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentDoubleClick);
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
@@ -161,7 +171,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(837, 277);
+            this.tabPage3.Size = new System.Drawing.Size(932, 350);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "tb_employee";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -170,19 +180,23 @@
             // 
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(7, 7);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.Size = new System.Drawing.Size(824, 265);
+            this.dataGridView4.Size = new System.Drawing.Size(919, 337);
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentDoubleClick);
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(701, 31);
+            this.button1.Location = new System.Drawing.Point(796, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -192,8 +206,9 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(432, 31);
+            this.button2.Location = new System.Drawing.Point(527, 31);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(263, 23);
             this.button2.TabIndex = 4;
@@ -207,7 +222,7 @@
             this.printToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(869, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(964, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -222,7 +237,7 @@
             // informationsToolStripMenuItem
             // 
             this.informationsToolStripMenuItem.Name = "informationsToolStripMenuItem";
-            this.informationsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.informationsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.informationsToolStripMenuItem.Text = "Informations";
             this.informationsToolStripMenuItem.Click += new System.EventHandler(this.informationsToolStripMenuItem_Click);
             // 
@@ -230,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(869, 376);
+            this.ClientSize = new System.Drawing.Size(964, 449);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabtool1);

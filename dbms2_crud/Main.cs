@@ -17,6 +17,8 @@ namespace dbms2_crud {
 
         private void Main_Load(object sender, EventArgs e)
         {
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.WindowState = FormWindowState.Maximized;
             getInfoData();
             getDeptData();
             getJobData();
