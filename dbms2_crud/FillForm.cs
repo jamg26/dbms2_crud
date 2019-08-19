@@ -21,19 +21,19 @@ namespace dbms2_crud
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.activeForm = comboBox1.Text;
-            if (this.activeForm == "tb_info")
+            if (this.activeForm == "Information")
             {
                 grp_tbinfo.Visible = true;
                 grp_tbdept.Visible = false;
                 grp_tbjob.Visible = false;
             }
-            if (this.activeForm == "tb_department")
+            if (this.activeForm == "Department")
             {
                 grp_tbinfo.Visible = false;
                 grp_tbdept.Visible = true;
                 grp_tbjob.Visible = false;
             }
-            if (this.activeForm == "tb_job")
+            if (this.activeForm == "Job")
             {
                 grp_tbinfo.Visible = false;
                 grp_tbdept.Visible = false;
@@ -54,13 +54,13 @@ namespace dbms2_crud
             dt_job = db.dbSelect("SELECT id FROM tb_job WHERE description='" + cmbJob.Text + "'");
             dt_dept = db.dbSelect("SELECT id FROM tb_department WHERE code='" + cmbDept.Text + "'");
             DataTable parent = db.dbSelect("SELECT id from tb_department WHERE code='" + cmbParent.Text + "'");
-            if (this.activeForm == "tb_info") {
-                db.dbInsert("INSERT INTO tb_info (lastname, firstname, middlename, address, birthdate, birthplace, contact, department, job) VALUES ('" + txtLN.Text + "', '" + txtFN.Text + "', '" + txtMN.Text + "', '" + txtAdd.Text + "', '" + txtBDate.Text + "', '" + txtBPlace.Text + "', '" + txtContact.Text + "', " + Convert.ToInt32(dt_dept.Rows[0][0]) + ", " + Convert.ToInt32(dt_job.Rows[0][0]) + ")");
+            if (this.activeForm == "Information") {
+                db.dbInsert("INSERT INTO tb_info (lastname, firstname, middlename, address, birthdate, birthplace, contact, department, job) VALUES ('" + txtLN.Text + "', '" + txtFN.Text + "', '" + txtMN.Text + "', '" + txtAdd.Text + "', '" + pickBday.Text + "', '" + txtBPlace.Text + "', '" + txtContact.Text + "', " + Convert.ToInt32(dt_dept.Rows[0][0]) + ", " + Convert.ToInt32(dt_job.Rows[0][0]) + ")");
             }
-            if (this.activeForm == "tb_department") {
+            if (this.activeForm == "Department") {
                 db.dbInsert("INSERT INTO tb_department (code, description) VALUES ('" + txtCode.Text + "', '" + txtDesc.Text + "')");
             }
-            if (this.activeForm == "tb_job") {
+            if (this.activeForm == "Job") {
                 db.dbInsert("INSERT INTO tb_job (description, parent, salary) VALUES ('" + txtJob.Text + "', " + parent.Rows[0][0] + ", " + txtSalary.Text + ")");
             }
             Main main = new Main();
@@ -74,13 +74,13 @@ namespace dbms2_crud
             DataTable jb = db.dbSelect("SELECT id from tb_job WHERE description='" + cmbJob.Text + "'");
             DataTable dp = db.dbSelect("SELECT id from tb_department WHERE code='" + cmbDept.Text + "'");
             DataTable parent = db.dbSelect("SELECT id from tb_department WHERE code='" + cmbParent.Text + "'");
-            if (this.activeForm == "tb_info") {
-                db.dbUpdate("UPDATE tb_info SET lastname='" + txtLN.Text + "', firstname='" + txtFN.Text + "', middlename='" + txtMN.Text + "', address='" + txtAdd.Text + "', birthdate='" + txtBDate.Text + "', birthplace='" + txtBPlace.Text + "', contact='" + txtContact.Text + "', department=" + dp.Rows[0][0].ToString() + ", job=" + jb.Rows[0][0].ToString() + " WHERE id=" + this.activeID);
+            if (this.activeForm == "Information") {
+                db.dbUpdate("UPDATE tb_info SET lastname='" + txtLN.Text + "', firstname='" + txtFN.Text + "', middlename='" + txtMN.Text + "', address='" + txtAdd.Text + "', birthdate='" + pickBday.Text + "', birthplace='" + txtBPlace.Text + "', contact='" + txtContact.Text + "', department=" + dp.Rows[0][0].ToString() + ", job=" + jb.Rows[0][0].ToString() + " WHERE id=" + this.activeID);
             }
-            if (this.activeForm == "tb_department") {
+            if (this.activeForm == "Department") {
                 db.dbUpdate("UPDATE tb_department SET code='" + txtCode.Text + "', description='" + txtDesc.Text + "' WHERE id=" + this.activeID);
             }
-            if (this.activeForm == "tb_job") {
+            if (this.activeForm == "Job") {
                 db.dbUpdate("UPDATE tb_job SET description='" + txtJob.Text + "', parent=" + parent.Rows[0][0] + ", salary=" + txtSalary.Text + " WHERE id=" + this.activeID);
             }
             Main main = new Main();

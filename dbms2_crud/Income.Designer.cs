@@ -57,6 +57,10 @@
             this.checkOther = new System.Windows.Forms.CheckBox();
             this.txtPagibigLoans = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblJob = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lblDept = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblTotalDeductions = new System.Windows.Forms.Label();
             this.lblPremLoans = new System.Windows.Forms.Label();
             this.labelLoans = new System.Windows.Forms.Label();
@@ -80,10 +84,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblDept = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.lblJob = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAbsent)).BeginInit();
@@ -536,6 +536,46 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "SUMMARY";
             // 
+            // lblJob
+            // 
+            this.lblJob.AutoSize = true;
+            this.lblJob.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJob.Location = new System.Drawing.Point(113, 47);
+            this.lblJob.Name = "lblJob";
+            this.lblJob.Size = new System.Drawing.Size(14, 14);
+            this.lblJob.TabIndex = 18;
+            this.lblJob.Text = "-";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(76, 47);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(31, 14);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Job";
+            // 
+            // lblDept
+            // 
+            this.lblDept.AutoSize = true;
+            this.lblDept.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDept.Location = new System.Drawing.Point(113, 33);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(14, 14);
+            this.lblDept.TabIndex = 16;
+            this.lblDept.Text = "-";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 14);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Department";
+            // 
             // lblTotalDeductions
             // 
             this.lblTotalDeductions.AutoSize = true;
@@ -767,46 +807,6 @@
             this.label4.Size = new System.Drawing.Size(0, 14);
             this.label4.TabIndex = 0;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 33);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 14);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Department";
-            // 
-            // lblDept
-            // 
-            this.lblDept.AutoSize = true;
-            this.lblDept.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDept.Location = new System.Drawing.Point(113, 33);
-            this.lblDept.Name = "lblDept";
-            this.lblDept.Size = new System.Drawing.Size(14, 14);
-            this.lblDept.TabIndex = 16;
-            this.lblDept.Text = "-";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(76, 47);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 14);
-            this.label23.TabIndex = 17;
-            this.label23.Text = "Job";
-            // 
-            // lblJob
-            // 
-            this.lblJob.AutoSize = true;
-            this.lblJob.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJob.Location = new System.Drawing.Point(113, 47);
-            this.lblJob.Name = "lblJob";
-            this.lblJob.Size = new System.Drawing.Size(14, 14);
-            this.lblJob.TabIndex = 18;
-            this.lblJob.Text = "-";
-            // 
             // Income
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -818,7 +818,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbEmployees);
             this.Name = "Income";
-            this.Text = "Income";
+            this.Text = "Income Form";
             this.Load += new System.EventHandler(this.Income_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Income_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numWorkDays)).EndInit();

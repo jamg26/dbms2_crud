@@ -45,7 +45,7 @@
             this.ClientSize = new System.Drawing.Size(711, 396);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Print_Ind";
-            this.Text = "Print_Ind";
+            this.Text = "Employee Info";
             this.Load += new System.EventHandler(this.Print_Ind_Load);
             this.ResumeLayout(false);
 

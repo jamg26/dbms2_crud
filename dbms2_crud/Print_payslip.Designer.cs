@@ -45,7 +45,7 @@
             this.ClientSize = new System.Drawing.Size(743, 355);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Print_payslip";
-            this.Text = "Print_payslip";
+            this.Text = "Payslip";
             this.Load += new System.EventHandler(this.Print_payslip_Load);
             this.ResumeLayout(false);
 

@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.delBtn = new System.Windows.Forms.Button();
             this.tabtool1 = new System.Windows.Forms.TabControl();
@@ -55,8 +55,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -71,13 +71,14 @@
             // 
             // delBtn
             // 
+            this.delBtn.Enabled = false;
             this.delBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delBtn.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delBtn.Location = new System.Drawing.Point(877, 31);
+            this.delBtn.Image = global::dbms2_crud.Properties.Resources.trash;
+            this.delBtn.Location = new System.Drawing.Point(885, 27);
             this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(75, 23);
+            this.delBtn.Size = new System.Drawing.Size(57, 42);
             this.delBtn.TabIndex = 1;
-            this.delBtn.Text = "DELETE";
             this.delBtn.UseVisualStyleBackColor = true;
             this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
@@ -104,7 +105,7 @@
             this.tb_info.Padding = new System.Windows.Forms.Padding(3);
             this.tb_info.Size = new System.Drawing.Size(932, 350);
             this.tb_info.TabIndex = 0;
-            this.tb_info.Text = "tb_info";
+            this.tb_info.Text = "Information";
             this.tb_info.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -116,7 +117,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(932, 350);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tb_department";
+            this.tabPage2.Text = "Department";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView3
@@ -134,7 +135,6 @@
             this.dataGridView3.TabIndex = 0;
             this.dataGridView3.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentDoubleClick);
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // tabPage1
             // 
@@ -145,7 +145,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(932, 350);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tb_job";
+            this.tabPage1.Text = "Job";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
@@ -173,7 +173,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(932, 350);
             this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tb_employee";
+            this.tabPage3.Text = "Employee";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // dataGridView4
@@ -196,11 +196,11 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(796, 31);
+            this.button1.Image = global::dbms2_crud.Properties.Resources.add2;
+            this.button1.Location = new System.Drawing.Point(828, 27);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(51, 42);
             this.button1.TabIndex = 3;
-            this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -208,11 +208,11 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(527, 31);
+            this.button2.Image = global::dbms2_crud.Properties.Resources.estimate;
+            this.button2.Location = new System.Drawing.Point(768, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(263, 23);
+            this.button2.Size = new System.Drawing.Size(54, 42);
             this.button2.TabIndex = 4;
-            this.button2.Text = "CALCULATE INCOME";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -230,8 +230,9 @@
             // 
             this.printToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informationsToolStripMenuItem});
+            this.printToolStripMenuItem.Image = global::dbms2_crud.Properties.Resources.print;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.printToolStripMenuItem.Text = "Print";
             // 
             // informationsToolStripMenuItem
@@ -248,13 +249,13 @@
             this.ClientSize = new System.Drawing.Size(964, 449);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.tabtool1);
             this.Controls.Add(this.delBtn);
+            this.Controls.Add(this.tabtool1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DATABASE MANAGEMENT SYSTEM 2 - CRUD";
+            this.Text = "DATABASE MANAGEMENT SYSTEM 2 - GALICIA";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabtool1.ResumeLayout(false);

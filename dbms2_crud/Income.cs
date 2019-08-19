@@ -90,6 +90,9 @@ namespace dbms2_crud {
         }
 
         private void btnAdd_Click(object sender, EventArgs e) {
+            if (txtOtherLoansName.Text == "Name") {
+                txtOtherLoansName.Text = "Other";
+            }
             if (this.txtNetPay.Text != "0.00") {
                 dbClass db = new dbClass();
                 DateTime date = DateTime.Now;

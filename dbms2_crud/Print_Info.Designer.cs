@@ -59,7 +59,7 @@
             this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "Print_Info";
-            this.Text = "Print_Info";
+            this.Text = "All Employees";
             this.Load += new System.EventHandler(this.Print_Info_Load);
             this.ResumeLayout(false);
 

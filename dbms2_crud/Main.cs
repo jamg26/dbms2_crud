@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace dbms2_crud {
     public partial class Main : Form {
-        string activeTab = "tb_info";
+        string activeTab = "Information";
         int del_id;
         public Main() {
             InitializeComponent();
@@ -19,6 +19,7 @@ namespace dbms2_crud {
         {
             //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             //this.WindowState = FormWindowState.Maximized;
+            delBtn.Enabled = false;
             getInfoData();
             getDeptData();
             getJobData();
@@ -59,6 +60,7 @@ namespace dbms2_crud {
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try {
+                delBtn.Enabled = true;
                 this.del_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             } catch { }
         }
@@ -70,24 +72,28 @@ namespace dbms2_crud {
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            dbClass db = new dbClass();
-            if (this.activeTab == "tb_info") {
-                db.dbDelete("DELETE FROM tb_info WHERE id=" + this.del_id);
-            }
-            if (this.activeTab == "tb_department") {
-                db.dbDelete("DELETE FROM tb_department WHERE id=" + this.del_id);
-            }
-            if (this.activeTab == "tb_job") {
-                db.dbDelete("DELETE FROM tb_job WHERE id=" + this.del_id);
-            }
-            if (this.activeTab == "tb_employee") {
-                db.dbDelete("DELETE FROM tb_employee WHERE id=" + this.del_id);
-            }
-            getInfoData();
-            getDeptData();
-            getJobData();
-            getEmployee();
-            MessageBox.Show("DELETED!");
+            DialogResult result = MessageBox.Show("Selected entry will be deleted", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (result.Equals(DialogResult.OK)) {
+                dbClass db = new dbClass();
+                if (this.activeTab == "Information") {
+                    db.dbDelete("DELETE FROM tb_info WHERE id=" + this.del_id);
+                }
+                if (this.activeTab == "Department") {
+                    db.dbDelete("DELETE FROM tb_department WHERE id=" + this.del_id);
+                }
+                if (this.activeTab == "Job") {
+                    db.dbDelete("DELETE FROM tb_job WHERE id=" + this.del_id);
+                }
+                if (this.activeTab == "Employee") {
+                    db.dbDelete("DELETE FROM tb_employee WHERE id=" + this.del_id);
+                }
+                getInfoData();
+                getDeptData();
+                getJobData();
+                getEmployee();
+                MessageBox.Show("DELETED!");
+            } else { }
+            
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
@@ -103,13 +109,13 @@ namespace dbms2_crud {
                 FillForm form = new FillForm();
                 form.getDept();
                 form.getJob();
-                if (this.activeTab == "tb_info") {
-                    form.comboBox1.Text = "tb_info";
+                if (this.activeTab == "Information") {
+                    form.comboBox1.Text = "Information";
                     form.txtLN.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
                     form.txtFN.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                     form.txtMN.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                     form.txtAdd.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                    form.txtBDate.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                    form.pickBday.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
                     form.txtBPlace.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                     form.txtContact.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
                     form.cmbDept.Text = dp.Rows[0][0].ToString();
@@ -123,20 +129,17 @@ namespace dbms2_crud {
             }
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
-        }
-
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e) {
             try {
+                delBtn.Enabled = true;
                 this.del_id = Convert.ToInt32(dataGridView3.CurrentRow.Cells[0].Value.ToString());
             } catch { }
         }
 
         private void dataGridView3_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
             FillForm form = new FillForm();
-            if (this.activeTab == "tb_department") {
-                form.comboBox1.Text = "tb_department";
+            if (this.activeTab == "Department") {
+                form.comboBox1.Text = "Department";
                 form.btnUpdate.Visible = true;
                 form.btnAdd.Visible = false;
                 form.txtCode.Text = dataGridView3.CurrentRow.Cells[1].Value.ToString();
@@ -149,6 +152,7 @@ namespace dbms2_crud {
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) {
             try {
+                delBtn.Enabled = true;
                 this.del_id = Convert.ToInt32(dataGridView2.CurrentRow.Cells[0].Value.ToString());
             } catch { }
         }
@@ -158,8 +162,8 @@ namespace dbms2_crud {
             DataTable parent = db.dbSelect("SELECT code from tb_department WHERE id=" + dataGridView2.CurrentRow.Cells[2].Value.ToString());
             FillForm form = new FillForm();
             form.getDept();
-            if (this.activeTab == "tb_job") {
-                form.comboBox1.Text = "tb_job";
+            if (this.activeTab == "Job") {
+                form.comboBox1.Text = "Job";
                 form.btnUpdate.Visible = true;
                 form.btnAdd.Visible = false;
                 form.activeID = dataGridView2.CurrentRow.Cells[0].Value.ToString();
@@ -192,6 +196,7 @@ namespace dbms2_crud {
 
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e) {
             try {
+                delBtn.Enabled = true;
                 this.del_id = Convert.ToInt32(dataGridView4.CurrentRow.Cells[0].Value.ToString());
             } catch { }
         }

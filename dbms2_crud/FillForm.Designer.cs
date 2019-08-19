@@ -33,7 +33,6 @@
             this.txtMN = new System.Windows.Forms.TextBox();
             this.txtLN = new System.Windows.Forms.TextBox();
             this.txtAdd = new System.Windows.Forms.TextBox();
-            this.txtBDate = new System.Windows.Forms.TextBox();
             this.txtBPlace = new System.Windows.Forms.TextBox();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.cmbDept = new System.Windows.Forms.ComboBox();
@@ -49,6 +48,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.grp_tbinfo = new System.Windows.Forms.GroupBox();
+            this.pickBday = new System.Windows.Forms.DateTimePicker();
             this.lblSal = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.grp_tbdept = new System.Windows.Forms.GroupBox();
@@ -75,9 +75,9 @@
             this.comboBox1.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "tb_info",
-            "tb_department",
-            "tb_job"});
+            "Information",
+            "Department",
+            "Job"});
             this.comboBox1.Location = new System.Drawing.Point(13, 13);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(247, 22);
@@ -115,14 +115,6 @@
             this.txtAdd.Name = "txtAdd";
             this.txtAdd.Size = new System.Drawing.Size(171, 21);
             this.txtAdd.TabIndex = 4;
-            // 
-            // txtBDate
-            // 
-            this.txtBDate.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBDate.Location = new System.Drawing.Point(23, 200);
-            this.txtBDate.Name = "txtBDate";
-            this.txtBDate.Size = new System.Drawing.Size(171, 21);
-            this.txtBDate.TabIndex = 5;
             // 
             // txtBPlace
             // 
@@ -265,6 +257,7 @@
             // 
             // grp_tbinfo
             // 
+            this.grp_tbinfo.Controls.Add(this.pickBday);
             this.grp_tbinfo.Controls.Add(this.lblSal);
             this.grp_tbinfo.Controls.Add(this.label15);
             this.grp_tbinfo.Controls.Add(this.label1);
@@ -277,7 +270,6 @@
             this.grp_tbinfo.Controls.Add(this.label6);
             this.grp_tbinfo.Controls.Add(this.txtAdd);
             this.grp_tbinfo.Controls.Add(this.label5);
-            this.grp_tbinfo.Controls.Add(this.txtBDate);
             this.grp_tbinfo.Controls.Add(this.label4);
             this.grp_tbinfo.Controls.Add(this.txtBPlace);
             this.grp_tbinfo.Controls.Add(this.label3);
@@ -291,8 +283,16 @@
             this.grp_tbinfo.Size = new System.Drawing.Size(470, 239);
             this.grp_tbinfo.TabIndex = 20;
             this.grp_tbinfo.TabStop = false;
-            this.grp_tbinfo.Text = "tb_info";
+            this.grp_tbinfo.Text = "Information";
             this.grp_tbinfo.Visible = false;
+            // 
+            // pickBday
+            // 
+            this.pickBday.Location = new System.Drawing.Point(23, 204);
+            this.pickBday.Name = "pickBday";
+            this.pickBday.Size = new System.Drawing.Size(171, 21);
+            this.pickBday.TabIndex = 24;
+            this.pickBday.Value = new System.DateTime(1994, 12, 26, 0, 0, 0, 0);
             // 
             // lblSal
             // 
@@ -320,13 +320,13 @@
             this.grp_tbdept.Controls.Add(this.label10);
             this.grp_tbdept.Controls.Add(this.txtDesc);
             this.grp_tbdept.Controls.Add(this.txtCode);
-            this.grp_tbdept.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_tbdept.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp_tbdept.Location = new System.Drawing.Point(26, 44);
             this.grp_tbdept.Name = "grp_tbdept";
             this.grp_tbdept.Size = new System.Drawing.Size(470, 239);
             this.grp_tbdept.TabIndex = 21;
             this.grp_tbdept.TabStop = false;
-            this.grp_tbdept.Text = "tb_department";
+            this.grp_tbdept.Text = "Department";
             this.grp_tbdept.Visible = false;
             // 
             // label11
@@ -373,13 +373,13 @@
             this.grp_tbjob.Controls.Add(this.label13);
             this.grp_tbjob.Controls.Add(this.label12);
             this.grp_tbjob.Controls.Add(this.txtJob);
-            this.grp_tbjob.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_tbjob.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp_tbjob.Location = new System.Drawing.Point(26, 44);
             this.grp_tbjob.Name = "grp_tbjob";
             this.grp_tbjob.Size = new System.Drawing.Size(470, 239);
             this.grp_tbjob.TabIndex = 22;
             this.grp_tbjob.TabStop = false;
-            this.grp_tbjob.Text = "tb_job";
+            this.grp_tbjob.Text = "Job";
             this.grp_tbjob.Visible = false;
             // 
             // txtSalary
@@ -463,7 +463,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "FillForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FillForm";
+            this.Text = "Information Form";
             this.Load += new System.EventHandler(this.FillForm_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FillForm_FormClosed);
             this.grp_tbinfo.ResumeLayout(false);
@@ -498,7 +498,6 @@
         public System.Windows.Forms.TextBox txtMN;
         public System.Windows.Forms.TextBox txtLN;
         public System.Windows.Forms.TextBox txtAdd;
-        public System.Windows.Forms.TextBox txtBDate;
         public System.Windows.Forms.TextBox txtBPlace;
         public System.Windows.Forms.TextBox txtContact;
         public System.Windows.Forms.ComboBox cmbDept;
@@ -514,5 +513,6 @@
         public System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Label lblSal;
         private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.DateTimePicker pickBday;
     }
 }
