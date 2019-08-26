@@ -78,7 +78,7 @@
             "Information",
             "Department",
             "Job"});
-            this.comboBox1.Location = new System.Drawing.Point(13, 13);
+            this.comboBox1.Location = new System.Drawing.Point(26, 13);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(247, 22);
             this.comboBox1.TabIndex = 0;
@@ -288,6 +288,7 @@
             // 
             // pickBday
             // 
+            this.pickBday.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pickBday.Location = new System.Drawing.Point(23, 204);
             this.pickBday.Name = "pickBday";
             this.pickBday.Size = new System.Drawing.Size(171, 21);
@@ -298,7 +299,7 @@
             // 
             this.lblSal.AutoSize = true;
             this.lblSal.Font = new System.Drawing.Font("Source Code Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSal.Location = new System.Drawing.Point(314, 186);
+            this.lblSal.Location = new System.Drawing.Point(317, 186);
             this.lblSal.Name = "lblSal";
             this.lblSal.Size = new System.Drawing.Size(14, 14);
             this.lblSal.TabIndex = 21;
